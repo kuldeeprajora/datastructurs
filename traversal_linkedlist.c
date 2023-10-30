@@ -5,7 +5,14 @@ struct node
     int data;
     struct node *next;
 };
-
+void llisttraversal(struct node *ptr)
+{
+    while (ptr != NULL)
+    {
+        printf("%d\n", ptr->data);
+        ptr = ptr->next;
+    }
+}
 int main()
 {
     struct node *head;
@@ -22,6 +29,6 @@ int main()
 
     third->data = 11;
     third->next = NULL;
-
+    llisttraversal(head);
     return 0;
 }
